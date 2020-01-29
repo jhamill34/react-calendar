@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import React from 'react'
 import PropTypes from 'prop-types'
-import { jsx } from 'theme-ui'
+import { jsx } from '@emotion/core'
 
 type ScheduleDurationProps = {
   /** */
@@ -20,7 +20,7 @@ export function ScheduleDuration(
 
   return (
     <div
-      sx={{
+      css={{
         display: 'flex',
         flexGrow: durration,
         flexShrink: 1,

@@ -1,5 +1,5 @@
 {
-  "name": "@react-calendar/utils",
+  "name": "@react-calendar/themed",
   "version": "0.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,9 +12,17 @@
     "test": "spedue test"
   },
   "peerDependencies": {
-    "date-fns": "^2.8.1"
+    "@react-calendar/core": "*",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "theme-ui": "^0.2.52"
   },
+  "dependencies": {},
   "devDependencies": {
-    "@spedue/scripts": "*"
+    "@emotion/core": "^10.0.27",
+    "@mdx-js/react": "^1.5.5",
+    "@spedue/scripts": "*",
+    "theme-ui": "^0.2.52"
   }
 }

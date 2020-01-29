@@ -2,9 +2,9 @@
 /** @jsx jsx */
 import React from 'react'
 import PropTypes from 'prop-types'
-import { jsx } from 'theme-ui'
+import { jsx } from '@emotion/core'
 import { differenceInCalendarDays } from 'date-fns'
-import { CalendarEvent } from '@react-themed-calendar/utils'
+import { CalendarEvent } from '@react-calendar/utils'
 
 import { IntervalPropType, CalendarEventPropType } from '../propTypes'
 
@@ -81,7 +81,7 @@ export function ScheduleRow<T extends CalendarEvent>(
 
   return (
     <div
-      sx={{
+      css={{
         display: 'flex',
         flexDirection: vertical ? 'column' : 'row',
       }}

@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import React from 'react'
 import PropTypes from 'prop-types'
-import { jsx } from 'theme-ui'
+import { jsx } from '@emotion/core'
 import { eachDayOfInterval } from 'date-fns'
 
 import { IntervalPropType } from '../propTypes'
@@ -29,8 +29,7 @@ export function DateRow(props: DateRowProps): React.ReactElement {
 
   return (
     <div
-      role="row"
-      sx={{
+      css={{
         display: 'flex',
         flexDirection: vertical ? 'column' : 'row',
         flexGrow: 1,
@@ -41,6 +40,7 @@ export function DateRow(props: DateRowProps): React.ReactElement {
           flexBasis: 0,
         },
       }}
+      role="row"
     >
       {dates.map((date, index) =>
         React.cloneElement(props.renderDate(date), { key: `date-row-${index}` })

@@ -2,9 +2,9 @@
 /** @jsx jsx */
 import React from 'react'
 import PropTypes from 'prop-types'
-import { jsx } from 'theme-ui'
+import { jsx } from '@emotion/core'
 
-import { CalendarEvent, schedule } from '@react-themed-calendar/utils'
+import { CalendarEvent, schedule } from '@react-calendar/utils'
 
 import { CalendarEventPropType } from '../propTypes'
 
@@ -44,13 +44,13 @@ export function ScheduleGroup<T extends CalendarEvent>(
 
   return (
     <div
-      sx={{
+      css={{
         display: 'flex',
         flexDirection: vertical ? 'row' : 'column',
       }}
     >
       <div
-        sx={{
+        css={{
           flexBasis: leadingSpace + 'em',
           flexGrow: 0,
           flexShrink: 0,

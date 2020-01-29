@@ -4,7 +4,7 @@ import '@testing-library/jest-dom/extend-expect'
 import { matchers } from 'jest-emotion'
 expect.extend(matchers)
 
-import { CalendarEvent } from '@react-themed-calendar/utils'
+import { CalendarEvent } from '@react-calendar/utils'
 
 import { ScheduleGroup } from './ScheduleGroup'
 

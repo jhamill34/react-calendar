@@ -1,10 +1,13 @@
 {
-  "name": "react-themed-calendar",
+  "name": "react-calendar",
   "version": "0.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
   "private": true,
+  "workspaces": [
+    "packages/**"
+  ],
   "scripts": {
     "build": "lerna run build",
     "clean": "lerna run clean",
@@ -32,10 +35,6 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "theme-ui": "^0.2.52",
     "typescript": "^3.7.5"
-  },
-  "workspaces": [
-    "packages/*"
-  ]
+  }
 }

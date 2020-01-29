@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import React from 'react'
 import PropTypes from 'prop-types'
-import { jsx } from 'theme-ui'
+import { jsx } from '@emotion/core'
 
 type CalendarRowProps = {
   /** */
@@ -16,14 +16,14 @@ type CalendarRowProps = {
 export function CalendarRow(props: CalendarRowProps): React.ReactElement {
   return (
     <div
-      role="rowgroup"
-      sx={{
+      css={{
         display: 'flex',
         position: 'relative',
       }}
+      role="rowgroup"
     >
       <div
-        sx={{
+        css={{
           display: 'flex',
           position: 'absolute',
           top: 0,

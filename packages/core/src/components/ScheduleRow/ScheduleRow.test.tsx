@@ -3,7 +3,7 @@ import { render } from '@testing-library/react'
 import { matchers } from 'jest-emotion'
 expect.extend(matchers)
 
-import { CalendarEvent } from '@react-themed-calendar/utils'
+import { CalendarEvent } from '@react-calendar/utils'
 
 import { ScheduleRow } from './ScheduleRow'
 

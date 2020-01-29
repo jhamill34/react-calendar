@@ -2,14 +2,14 @@
 /** @jsx jsx */
 import React from 'react'
 import PropTypes from 'prop-types'
-import { jsx } from 'theme-ui'
+import { jsx } from '@emotion/core'
 
 import {
   chunkInterval,
   assignEventsToIntervals,
   CalendarGroup,
   CalendarEvent,
-} from '@react-themed-calendar/utils'
+} from '@react-calendar/utils'
 import { CalendarEventPropType, IntervalPropType } from '../propTypes'
 
 type CalendarProps<T extends CalendarEvent> = {
@@ -40,8 +40,7 @@ export function Calendar<T extends CalendarEvent>(
 
   return (
     <div
-      role="grid"
-      sx={{
+      css={{
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
@@ -49,6 +48,7 @@ export function Calendar<T extends CalendarEvent>(
           flexGrow: 1,
         },
       }}
+      role="grid"
     >
       {props.heading}
       {groups.map((group, index) =>
