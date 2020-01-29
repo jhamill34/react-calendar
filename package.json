@@ -5,9 +5,10 @@
   "types": "dist/index.d.ts",
   "license": "MIT",
   "private": true,
-  "workspaces": [
-    "packages/**"
-  ],
+  "workspaces": {
+    "packages": [ "packages/**" ],
+    "nohoist": ["**/theme-ui"]
+  },
   "scripts": {
     "build": "lerna run build",
     "clean": "lerna run clean",
