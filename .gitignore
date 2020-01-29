@@ -4,3 +4,4 @@ build
 .cache
 public
 .next
+*.log
