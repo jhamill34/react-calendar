@@ -1,4 +1,4 @@
-# React Calendar
+# 📆 React Calendar 
 
 React calendar is a component library to be able to manage and manipulate 
 calendar events in a simple way between both mobile and desktop while being able
