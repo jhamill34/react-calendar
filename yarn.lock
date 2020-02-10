@@ -881,14 +881,14 @@
     pirates "^4.0.0"
     source-map-support "^0.5.16"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.0", "@babel/runtime@^7.7.4":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.3.1", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.0", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.4", "@babel/runtime@^7.7.6":
   version "7.8.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.8.4.tgz#d79f5a2040f7caa24d53e563aad49cbc05581308"
   integrity sha512-neAp3zt80trRVBI1x0azq6c57aNBqYZH8KhMm3TaB7wEI5Q4A2SHfBHE8w9gOhI/lrqxtEbXZgQIrHP+wvSGwQ==
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@^7.5.1", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.6":
+"@babel/runtime@^7.5.1", "@babel/runtime@^7.6.2":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.8.3.tgz#0811944f73a6c926bb2ad35e918dcc1bfab279f1"
   integrity sha512-fVHx1rzEmwB130VTkLnxR+HmxcTjGzH12LYQcFFoBwakMd3aOMD4OsRN7tGG/UOYE2ektgFrS8uACAoRk1CY0w==
@@ -2380,9 +2380,9 @@
   integrity sha512-cFWio0/ag0lIVvJZlXOyUuwQt+60XabQOaGKnjfNuNjuPVto504m4GK4pS/VAW3z16PngnixdImTroVYKCPcpQ==
 
 "@spedue/scripts@*":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@spedue/scripts/-/scripts-0.2.0.tgz#900c398b0802553d70647f3d824abee26ad33e1d"
-  integrity sha512-BSILnyBmGGiRHW86OPIXdzAbKcEowNxg9rZj01ut/7oD0hFhFyVpnYefp0eGadGcIiVNdXCN5XjITXuOjjKHrQ==
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@spedue/scripts/-/scripts-0.2.2.tgz#57b7c0021b3090df1dfbc833b4e5d5f714deb8d9"
+  integrity sha512-M1k3yJ+UqrjmUcdeYr6PL9C7BnwtFsFExXyO8HTOlYiB0Q+M8R/56j9vusyI9TF9SLJcRBvvdp/DLbqLSGRKAw==
   dependencies:
     "@babel/core" "^7.8.3"
     "@commitlint/config-conventional" "^8.3.4"
@@ -2391,7 +2391,7 @@
     "@spedue/babel-preset" "^0.1.1"
     "@spedue/eslint-config" "^0.1.2"
     "@spedue/prettier-config" "^0.1.1"
-    "@spedue/storybook-preset" "*"
+    "@spedue/storybook-preset" "^0.1.4"
     "@spedue/utils" "^0.1.1"
     "@storybook/react" "^5.3.9"
     "@typescript-eslint/eslint-plugin" "^2.16.0"
@@ -2422,10 +2422,10 @@
     webpack "^4.41.5"
     webpack-dev-server "^3.10.1"
 
-"@spedue/storybook-preset@*":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@spedue/storybook-preset/-/storybook-preset-0.1.2.tgz#6f6859ed27309e8d41d8a155d2dabc10b6b86e05"
-  integrity sha512-haAYv5UZmRsS8io64KfuCfNUu5KLp/+RMYMm9bIXDjIfZJOamYF5NFUMfxZQ4mex9otqPuPGJFeJrf3s1gul3Q==
+"@spedue/storybook-preset@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@spedue/storybook-preset/-/storybook-preset-0.1.4.tgz#8bcf62d1adb6115c2b614ec22cb33f0a63f15c6b"
+  integrity sha512-QB+MPs4zzbH7qGXFaYPHJuqqmcEjPAllks/m5hWF1xZRDU5A4QSzNufAjp1NYiVqp5wIbplHf17g5vl+gy3yZA==
   dependencies:
     "@mdx-js/loader" "^1.5.5"
     "@spedue/babel-preset" "*"
@@ -3229,9 +3229,9 @@
   integrity sha512-FA/BWv8t8ZWJ+gEOnLLd8ygxH/2UFbAvgEonyfN6yWGLKc7zVjbpl2Y4CTjid9h2RfgPP6SEt6uHwEOply00yw==
 
 "@types/yargs@^13.0.0":
-  version "13.0.7"
-  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-13.0.7.tgz#658d8578a444670a41cc9c338d5e0e0a9910fd9e"
-  integrity sha512-Sg9kNeJz+V+W+0fugcVhHC+mNHnydDR1RJrW5Qn2jVrDQARF8wfPVqIqwEzZp+bneuEBIm2ClsJ1/je42ZBzSg==
+  version "13.0.8"
+  resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-13.0.8.tgz#a38c22def2f1c2068f8971acb3ea734eb3c64a99"
+  integrity sha512-XAvHLwG7UQ+8M4caKIH0ZozIOYay5fQkAgyIXegXT9jPtdIGdhga+sUEdAr1CiG46aB+c64xQEYyEzlwWVTNzA==
   dependencies:
     "@types/yargs-parser" "*"
 

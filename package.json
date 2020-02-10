@@ -18,7 +18,6 @@
     "clean": "lerna run clean",
     "compile": "lerna run compile",
     "lint": "spedue lint",
-    "start": "spedue start",
     "test": "lerna run test"
   },
   "prettier": "@spedue/prettier-config",

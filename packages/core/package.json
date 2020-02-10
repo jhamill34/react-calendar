@@ -9,7 +9,8 @@
     "build": "spedue compile 'src/index.ts'",
     "clean": "spedue clean",
     "compile": "spedue compile 'src/**/*' --noEmit",
-    "test": "spedue test"
+    "test": "spedue test",
+    "story": "spedue story"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.0",
