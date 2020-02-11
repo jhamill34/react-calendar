@@ -1,4 +1,3 @@
-// eslint-disable-next-line tsdoc/syntax
 /** @jsx jsx */
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -8,16 +7,36 @@ import { eachDayOfInterval } from 'date-fns'
 import { IntervalPropType } from '../propTypes'
 
 type DateRowProps = {
-  /** */
+  /**
+   * The interval to which to generate dates between.
+   *
+   * **Note** this interval is inclusive of start and exclusive of end.
+   * The dates that are computed are in the range [Start, End)
+   */
   interval: Interval
 
-  /** */
+  /**
+   * These rows *can* grow flexibly to a parent container but
+   * have a minimum height that restricts them from shrinking too far.
+   *
+   * @default '150px'
+   */
   minHeight?: string | number
 
-  /** */
-  renderDate: (date: Date) => React.ReactElement
+  /**
+   * For each date in the interval passed this function gets called
+   * to delegate to this components parent how it should be rendered.
+   *
+   * @param date - The current date to render.
+   */
+  renderDate: (date: Date) => JSX.Element
 
-  /** */
+  /**
+   * Determines if the orientation of the row should be vertical or not.
+   * This is useful when configuring a calender to be used for mobile.
+   *
+   * @default false
+   */
   vertical?: boolean
 }
 

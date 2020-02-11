@@ -1,7 +1,7 @@
-// eslint-disable-next-line tsdoc/syntax
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from 'react'
+import { format } from 'date-fns'
 import { DateRow } from './DateRow'
 import mdx from './DateRow.mdx'
 
@@ -30,9 +30,13 @@ export function basicUsage(): JSX.Element {
             padding: '1em',
           }}
         >
-          {date.toString()}
+          {format(date, 'MMMM do, yyyy')}
         </div>
       )}
     />
   )
+}
+
+export function withVerticalOrientation(): JSX.Element {
+  return <div></div>
 }

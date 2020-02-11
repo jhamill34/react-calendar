@@ -2,7 +2,17 @@ import { Preview, Story, Props } from '@storybook/addon-docs/blocks'
 
 # Calendar
 
-This is my documentation 
+A calendar component when rendered computes which groups the passed events
+should belong to and then delegates how to render each "group" to the 
+parent component. 
+
+In the below example we have five events that are to be grouped into their 
+weeks. In this case we want to render the entire month of *December* with group
+sizes equal to the typical week length (i.e. 7). After determining this groping we
+find that the first three events are grouped into the first week, and events 3 and 4 
+are grouped into the second week. No other events are grouped into the remaining weeks. 
+
+Take note that event 3 spans two weeks and gets split between the two. 
 
 ## Basic Usage
 

@@ -8,7 +8,7 @@ import { CalendarEvent } from '@react-calendar/utils'
 import { ScheduleRow } from './ScheduleRow'
 
 /** */
-function mockRenderEvent(): React.ReactNode {
+function mockRenderEvent(): React.ReactElement {
   return <div data-testid="schedule-event" />
 }
 
@@ -90,7 +90,7 @@ describe('<ScheduleRow />', () => {
       <ScheduleRow
         events={[]}
         interval={interval}
-        renderEvent={(): React.ReactNode => <div />}
+        renderEvent={(): React.ReactElement => <div />}
       />
     )
 

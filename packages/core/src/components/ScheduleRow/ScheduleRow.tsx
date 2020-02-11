@@ -1,6 +1,5 @@
-// eslint-disable-next-line tsdoc/syntax
 /** @jsx jsx */
-import React from 'react'
+import React, { ReactNode } from 'react'
 import PropTypes from 'prop-types'
 import { jsx } from '@emotion/core'
 import { differenceInCalendarDays } from 'date-fns'
@@ -11,20 +10,42 @@ import { IntervalPropType, CalendarEventPropType } from '../propTypes'
 import { ScheduleDuration } from '../ScheduleDuration'
 
 type ScheduleRowProps<T extends CalendarEvent> = {
-  /** */
+  /**
+   * The interval to which to generate dates between.
+   *
+   * **Note** this interval is inclusive of start and exclusive of end.
+   * The dates that are computed are in the range [Start, End)
+   */
   interval: Interval
 
-  /** */
+  /**
+   * Determines if the orientation of the row should be vertical or not.
+   * This is useful when configuring a calender to be used for mobile.
+   *
+   * @default false
+   */
   vertical?: boolean
 
-  /** */
+  /**
+   * An array of events to be displayed
+   *
+   * Where `T` is a type that extends CalendarEvent
+   */
   events: T[]
 
-  /** */
-  emptyElement?: React.ReactNode
+  /**
+   * An optional prop that gets rendered in place of any spaces
+   * between events.
+   */
+  emptyElement?: ReactNode
 
-  /** */
-  renderEvent: (event: T) => React.ReactNode
+  /**
+   * For each of the events that are passed in this method delegates
+   * to the parent component how the actual event should be rendered.
+   *
+   * @param event - the event that is to be rendered
+   */
+  renderEvent: (event: T) => JSX.Element
 }
 
 /** */

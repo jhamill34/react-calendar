@@ -2,12 +2,28 @@ import { Preview, Story, Props } from '@storybook/addon-docs/blocks'
 
 # Schedule Row 
 
-This is my documentation 
+This component takes a list of non-overlapping events and determines the space between each other
+and the boundary of the row that they are being placed in. Aside from the actual events and the
+render function this component requires an interval that acts as the boundary of this group. 
+For each of the elements the component delegates to its parent on how it should be rendered. 
+
+In the following examples the boundary is 5 days in length (February 1st through February 5th). 
+There are two events that are contained within the boundary. The first one is from February 1st to the 2nd. 
+The second one is just the 4th. 
 
 ## Basic Usage
 
 <Preview>
   <Story id="core-schedule-row--basic-usage" />
+</Preview>
+
+## With Empty Element 
+
+Its nice to be able render each event but what if we want to be able do the opposite? Render the spaces between
+each event? Here we can leaverage the optional prop `emptyElement`.
+
+<Preview>
+  <Story id="core-schedule-row--with-empty-element" />
 </Preview>
 
 ## Props

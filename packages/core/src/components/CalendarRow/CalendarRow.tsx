@@ -1,15 +1,22 @@
-// eslint-disable-next-line tsdoc/syntax
 /** @jsx jsx */
-import React from 'react'
+import React, { ReactNode } from 'react'
 import PropTypes from 'prop-types'
 import { jsx } from '@emotion/core'
 
 type CalendarRowProps = {
-  /** */
-  bg?: React.ReactNode
+  /**
+   * A react node to render in the background. This element
+   * dictates the height of the entire row.
+   */
+  bg?: ReactNode
 
-  /** */
-  fg?: React.ReactNode
+  /**
+   * A react node to render in a parent container that is
+   * absolutly positioned.
+   *
+   * **Note** this element will grow flexibly to fill the container.
+   */
+  fg?: ReactNode
 }
 
 /** */

@@ -2,7 +2,13 @@ import { Preview, Story, Props } from '@storybook/addon-docs/blocks'
 
 # Calendar Row 
 
-This is my documentation 
+This component abstracts away the idea of layering two components on top of each other in a basic way. 
+It allows us to be able to create a component that lives in the background while being able to have a 
+component live on top of it that just fills the space that the background creates.
+
+One thing to note about this component is the responsibility that each component takes. The background 
+(i.e. `bg`) gets to dictate the size of the overall container while the foreground (i.e., `fg`) gets to 
+come along for the ride and just fill the space. 
 
 ## Basic Usage
 

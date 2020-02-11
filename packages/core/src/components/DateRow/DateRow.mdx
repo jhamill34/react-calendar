@@ -2,7 +2,13 @@ import { Preview, Story, Props } from '@storybook/addon-docs/blocks'
 
 # Date Row 
 
-This is my documentation 
+A date row can be thought of as a glorified `map` function for intervals, except 
+specific to maping dates to react components. At minimum this component needs to know
+the interval to generate and what to do with each date object. 
+
+One thing to keep in mind is that **the start value is inclusive** and the **end value is exclusive**. 
+In the basic usage example below we actually pass a an interval object that starts on February 1st 2020 
+and the end date is specified to be February 5th 2020 (which is **NOT** rendered). 
 
 <Preview>
   <Story id="core-date-row--basic-usage" />

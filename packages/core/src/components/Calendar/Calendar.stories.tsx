@@ -1,4 +1,3 @@
-// eslint-disable-next-line tsdoc/syntax
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from 'react'
@@ -57,7 +56,14 @@ export function basicUsage(): JSX.Element {
         },
       ]}
       groupSize={7}
-      heading={<div>Heading</div>}
+      heading={
+        <div css={{ fontSize: '1.5em', fontWeight: 'bold' }}>
+          This is My Super Cool Heading{' '}
+          <span aria-label="Sunglasses emoji" role="img">
+            😎
+          </span>
+        </div>
+      }
       interval={{
         start: new Date(2019, 11, 1),
         end: new Date(2020, 0, 5),

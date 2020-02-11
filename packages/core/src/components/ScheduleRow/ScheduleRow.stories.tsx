@@ -21,30 +21,14 @@ export function basicUsage(): JSX.Element {
       events={[
         {
           id: 1,
-          interval: {
-            start: new Date(2020, 1, 1),
-            end: new Date(2020, 1, 2),
-          },
+          interval: { start: new Date(2020, 1, 1), end: new Date(2020, 1, 3) },
         },
         {
           id: 2,
-          interval: {
-            start: new Date(2020, 1, 3),
-            end: new Date(2020, 1, 4),
-          },
-        },
-        {
-          id: 3,
-          interval: {
-            start: new Date(2020, 1, 4),
-            end: new Date(2020, 1, 5),
-          },
+          interval: { start: new Date(2020, 1, 4), end: new Date(2020, 1, 5) },
         },
       ]}
-      interval={{
-        start: new Date(2020, 1, 1),
-        end: new Date(2020, 1, 6),
-      }}
+      interval={{ start: new Date(2020, 1, 1), end: new Date(2020, 1, 6) }}
       renderEvent={(event): React.ReactElement => (
         <div
           css={{
@@ -57,4 +41,32 @@ export function basicUsage(): JSX.Element {
       )}
     />
   )
+}
+
+export function withEmptyElement(): JSX.Element {
+  return (
+    <ScheduleRow
+      emptyElement={
+        <div css={{ border: '1px solid black', padding: '1em' }}>EMPTY</div>
+      }
+      events={[
+        {
+          id: 1,
+          interval: { start: new Date(2020, 1, 1), end: new Date(2020, 1, 3) },
+        },
+        {
+          id: 2,
+          interval: { start: new Date(2020, 1, 4), end: new Date(2020, 1, 5) },
+        },
+      ]}
+      interval={{ start: new Date(2020, 1, 1), end: new Date(2020, 1, 6) }}
+      renderEvent={(event): React.ReactElement => (
+        <div css={{ padding: '1em' }}>Event ID: {event.id}</div>
+      )}
+    />
+  )
+}
+
+export function withVerticalOrientation(): JSX.Element {
+  return <div></div>
 }

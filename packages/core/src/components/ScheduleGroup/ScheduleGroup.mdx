@@ -2,12 +2,48 @@ import { Preview, Story, Props } from '@storybook/addon-docs/blocks'
 
 # Schedule Group 
 
-This is my documentation 
+This component determines a situation for events such that no two events are overlapping 
+(i.e., scheduled events). After this configuration is computed the rendering is delegated
+to the parent component on how it actually should render a group of non-overlapping events. 
+
+In the following examples each group is passed three events where both event 1 and 2 are not overlapping
+but both overlap event 3 forcing event 3 to be rendered it its own row.
 
 ## Basic Usage
 
 <Preview>
   <Story id="core-schedule-group--basic-usage" />
+</Preview>
+
+## With Leading Space
+
+One of the optional props that comes with this component is `leadingSpace`. 
+If left as `undefined` then no space is added but any positive number is interpreted
+as the amount of `em` to leave in front before rendering the groups. 
+
+Notice how it actually renders a space. This is so that you can potentially
+render a small window to see informatio underneath these components. This component
+is generally rendered on top of a series of dates. 
+
+<Preview>
+  <Story id="core-schedule-group--with-leading-space" />
+</Preview>
+
+## With Extra Rows
+
+Another optional prop that comes with this component is `numEventRows`. 
+If left as `undefined` then each row takes up an equal amount of space according to flexbox rules.
+If this value is supplied then the number of rows is static and will be evenly 
+distributed according to the value passed to this prop. If the number of total rows 
+is greater than the value passed then the number of rows is trunkated to `numEventRows`. 
+
+If there are not enough then empty rows, then rows added until the number of rows is equal to `numEventRows`.
+
+Notice how the render method gets called one extra time 
+to render an empty list of events. 
+
+<Preview>
+  <Story id="core-schedule-group--with-extra-rows" />
 </Preview>
 
 ## Props
