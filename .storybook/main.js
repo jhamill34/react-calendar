@@ -1,4 +1,4 @@
 module.exports = {
-  stories: ['../**/*.stories.(tsx|mdx)'],
+  stories: ['../packages/**/*.stories.(tsx|mdx)'],
   addons: [require.resolve('@spedue/storybook-preset')],
 }
