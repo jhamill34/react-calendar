@@ -18,7 +18,8 @@
     "clean": "spedue clean",
     "compile": "spedue compile 'src/**/*' --noEmit",
     "test": "spedue test",
-    "story": "spedue story"
+    "story": "spedue story",
+    "docs": "spedue story --docs --mode static"
   },
   "peerDependencies": {
     "@emotion/core": "^10.0.0",
