@@ -4,7 +4,7 @@ import { CalendarRow } from './CalendarRow'
 import mdx from './CalendarRow.mdx'
 
 export default {
-  title: 'Core/Calendar Row',
+  title: 'Components/Calendar Row',
   component: CalendarRow,
   parameters: {
     docs: {

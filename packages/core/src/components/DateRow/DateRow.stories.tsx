@@ -6,7 +6,7 @@ import { DateRow } from './DateRow'
 import mdx from './DateRow.mdx'
 
 export default {
-  title: 'Core/Date Row',
+  title: 'Components/Date Row',
   component: DateRow,
   parameters: {
     docs: {

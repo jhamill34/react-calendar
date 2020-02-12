@@ -5,19 +5,19 @@ import { create } from '@storybook/theming'
 const myTheme = create({
   base: 'light',
 
-  colorPrimary: 'hotpink',
-  colorSecondary: 'hotpink',
+  colorPrimary: '#b12121',
+  colorSecondary: '#b12121',
 
-  // Typography
+  // Typograph
   fontBase: '"Open Sans", sans-serif',
   fontCode: 'monospace',
 
   // Toolbar default and active colors
-  barTextColor: 'black',
-  barSelectedColor: 'black',
-  barBg: 'hotpink',
+  barTextColor: '#F0F2F5',
+  barSelectedColor: '#F0F2F5',
+  barBg: '#b12121',
 
-  brandTitle: 'My custom storybook',
+  brandTitle: 'React Calendar',
   brandImage: 'https://placehold.it/350x150',
 })
 

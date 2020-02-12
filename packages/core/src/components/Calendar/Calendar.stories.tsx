@@ -6,7 +6,7 @@ import { Calendar } from './Calendar'
 import mdx from './Calendar.mdx'
 
 export default {
-  title: 'Core/Calendar',
+  title: 'Components/Calendar',
   component: Calendar,
   parameters: {
     docs: {

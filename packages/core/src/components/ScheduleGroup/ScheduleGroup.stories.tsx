@@ -1,4 +1,3 @@
-// eslint-disable-next-line tsdoc/syntax
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import React from 'react'
@@ -6,7 +5,7 @@ import { ScheduleGroup } from './ScheduleGroup'
 import mdx from './ScheduleGroup.mdx'
 
 export default {
-  title: 'Core/Schedule Group',
+  title: 'Components/Schedule Group',
   component: ScheduleGroup,
   parameters: {
     docs: {
