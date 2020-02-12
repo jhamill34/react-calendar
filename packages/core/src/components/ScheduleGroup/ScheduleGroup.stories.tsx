@@ -5,7 +5,7 @@ import { ScheduleGroup } from './ScheduleGroup'
 import mdx from './ScheduleGroup.mdx'
 
 export default {
-  title: 'Components/Schedule Group',
+  title: 'Core/Components/Schedule Group',
   component: ScheduleGroup,
   parameters: {
     docs: {

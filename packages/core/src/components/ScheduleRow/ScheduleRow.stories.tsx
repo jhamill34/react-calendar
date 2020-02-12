@@ -5,7 +5,7 @@ import { ScheduleRow } from './ScheduleRow'
 import mdx from './ScheduleRow.mdx'
 
 export default {
-  title: 'Components/Schedule Row',
+  title: 'Core/Components/Schedule Row',
   component: ScheduleRow,
   parameters: {
     docs: {
