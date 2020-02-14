@@ -1,4 +1,3 @@
-// eslint-disable-next-line tsdoc/syntax
 /** @jsx jsx */
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -41,8 +40,8 @@ export function EventItem(props: EventItemProps): React.ReactElement {
       onKeyDown={handleKeyDown}
       role="button"
       sx={{
-        pointerEvents: 'auto',
-        visibility: hidden ? 'hidden' : 'visible',
+        opacity: hidden ? 0 : 1.0,
+        pointerEvents: hidden ? 'none' : 'auto',
         variant: 'calendar.eventItem',
       }}
       tabIndex={0}

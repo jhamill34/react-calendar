@@ -1,17 +1,23 @@
 // eslint-disable-next-line tsdoc/syntax
 /** @jsx jsx */
-import React from 'react'
+import React, { ReactNode } from 'react'
 import PropTypes from 'prop-types'
 import { jsx } from 'theme-ui'
 
 type CalendarHeaderProps = {
-  /** */
-  left?: React.ReactElement
+  /**
+   * Node to place to the **left** of the title
+   */
+  left?: ReactNode
 
-  /** */
-  right?: React.ReactElement
+  /**
+   * Node to place to the **right** of the title
+   */
+  right?: ReactNode
 
-  /** */
+  /**
+   * The main title to display
+   */
   title: string
 }
 
@@ -35,7 +41,7 @@ export function CalendarHeader(props: CalendarHeaderProps): React.ReactElement {
 }
 
 CalendarHeader.propTypes = {
-  left: PropTypes.element,
-  right: PropTypes.element,
+  left: PropTypes.node,
+  right: PropTypes.node,
   title: PropTypes.string.isRequired,
 }

@@ -2,6 +2,8 @@ import { addParameters } from '@storybook/react'
 import { setupPreview } from '@spedue/storybook-preset/dist/preview'
 import { create } from '@storybook/theming'
 
+import { theme } from '../packages/themed/src/themes'
+
 const myTheme = create({
   base: 'light',
 
@@ -24,6 +26,11 @@ const myTheme = create({
 setupPreview(addParameters)
 
 addParameters({
+  themeUi: {
+    themes: [
+      { name: 'Basic', theme }
+    ]
+  },
   options: {
     theme: myTheme,
   },

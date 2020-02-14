@@ -1,17 +1,25 @@
 // eslint-disable-next-line tsdoc/syntax
 /** @jsx jsx */
-import React from 'react'
+import React, { ReactNode } from 'react'
 import PropTypes from 'prop-types'
 import { jsx } from 'theme-ui'
 
 type CalendarHeaderBtnProps = {
-  /** */
-  children: React.ReactNode
+  /**
+   * Any child components that need to be rendered.
+   */
+  children: ReactNode
 
-  /** */
+  /**
+   * Label to apply to button if using an SVG component
+   * such as the Chevron for a11y compliance.
+   */
   label?: string
 
-  /** */
+  /**
+   * When the button is selected by either a keypress or click
+   * this callback will be called.
+   */
   onSelect?: () => void
 }
 

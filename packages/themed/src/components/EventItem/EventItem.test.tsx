@@ -10,7 +10,6 @@ import { EventItem } from './EventItem'
 describe('<EventItem />', () => {
   it('should be hidden if the prop is set', () => {
     const { getByText } = render(<EventItem hidden title="event" />)
-
     const element = getByText('event')
 
     expect(element).not.toBeVisible()
