@@ -6,3 +6,4 @@ public
 .next
 *.log
 docs
+coverage
