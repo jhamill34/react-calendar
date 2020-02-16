@@ -1,4 +1,3 @@
-// eslint-disable-next-line tsdoc/syntax
 /** @jsx jsx */
 import React, { ReactNode } from 'react'
 import PropTypes from 'prop-types'
@@ -28,9 +27,9 @@ export function CalendarHeader(props: CalendarHeaderProps): React.ReactElement {
   return (
     <div
       sx={{
-        variant: 'calendar.header',
         display: 'flex',
         justifyContent: 'space-between',
+        variant: 'calendar.header',
       }}
     >
       {props.left}

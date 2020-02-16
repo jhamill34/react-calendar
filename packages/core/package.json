@@ -1,6 +1,6 @@
 {
   "name": "@react-calendar/core",
-  "version": "0.0.0-development",
+  "version": "0.1.2-development",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",

@@ -1,14 +1,16 @@
-// eslint-disable-next-line tsdoc/syntax
 /** @jsx jsx */
 import React from 'react'
 import PropTypes from 'prop-types'
 import { jsx } from 'theme-ui'
 
 type DateHeaderProps = {
-  /** */
+  /**
+   * Indicates the date is selected
+   * @default false
+   */
   selected?: boolean
 
-  /** */
+  /** The value to display */
   value: string
 }
 

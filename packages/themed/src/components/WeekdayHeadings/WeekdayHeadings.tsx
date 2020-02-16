@@ -1,4 +1,3 @@
-// eslint-disable-next-line tsdoc/syntax
 /** @jsx jsx */
 import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
@@ -19,10 +18,18 @@ export enum WeekDayValues {
 }
 
 type WeekdayHeadingsProps = {
-  /** */
+  /**
+   * If set to true then headings are abbreviated.
+   *
+   * @default false
+   */
   short?: boolean
 
-  /** */
+  /**
+   * Which date to start at the begining of the row
+   *
+   * @default WeekDayValues.SUN
+   */
   weekStartsOn?: WeekDayValues
 }
 

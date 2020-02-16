@@ -2,7 +2,28 @@ import { Story, Preview, Props } from '@storybook/addon-docs/blocks'
 
 # Date Header
 
-Imagine a combination of ActionScript and PHP. GROSS!
+This component is used to actually create an indicator for a date. 
+Typically it's a child component of the `<DateCell />` component. 
+
+It wraps around the date string and provides a selected state. This is mainly
+to indicate a date as today. 
+
+To style this component add a style object to your theme of the form
+
+```js dark
+{
+  calendar: {
+    dateHeader: {
+      basic: { 
+        // Styles go here..
+      },
+      selected: { 
+        // Styles go here..
+      },
+    }
+  }
+}
+```
 
 <Preview>
   <Story id="themed-components-date-header--basic-usage"/>

@@ -75,10 +75,7 @@ describe('<CalendarRow />', () => {
 
       const bgParent = getByTestId('row-foreground').parentNode
       expect(bgParent).toHaveStyleRule('position', 'absolute')
-      expect(bgParent).toHaveStyleRule('top', '0')
-      expect(bgParent).toHaveStyleRule('left', '0')
-      expect(bgParent).toHaveStyleRule('right', '0')
-      expect(bgParent).toHaveStyleRule('bottom', '0')
+      expect(bgParent).toHaveStyleRule('inset', '0')
     })
 
     it('should be placed above the background component', () => {

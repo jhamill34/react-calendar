@@ -5,11 +5,11 @@ import { matchers } from 'jest-emotion'
 expect.extend(matchers)
 
 import { render } from '../test-helper'
-import { CalendarHeaderBtn } from './CalendarHeaderBtn'
+import { CalendarButton } from './CalendarButton'
 
-describe('<CalendarHeaderBtn />', () => {
+describe('<CalendarButton />', () => {
   it('should render children', () => {
-    const { container } = render(<CalendarHeaderBtn>Button</CalendarHeaderBtn>)
+    const { container } = render(<CalendarButton>Button</CalendarButton>)
 
     expect(container).toHaveTextContent('Button')
   })
@@ -17,7 +17,7 @@ describe('<CalendarHeaderBtn />', () => {
   it('should call trigger callback on click', () => {
     const mockHandler = jest.fn()
     const { getByText } = render(
-      <CalendarHeaderBtn onSelect={mockHandler}>Button</CalendarHeaderBtn>
+      <CalendarButton onSelect={mockHandler}>Button</CalendarButton>
     )
 
     const element = getByText('Button')
@@ -29,7 +29,7 @@ describe('<CalendarHeaderBtn />', () => {
   it('should call trigger callback on keydown ENTER', () => {
     const mockHandler = jest.fn()
     const { getByText } = render(
-      <CalendarHeaderBtn onSelect={mockHandler}>Button</CalendarHeaderBtn>
+      <CalendarButton onSelect={mockHandler}>Button</CalendarButton>
     )
 
     const element = getByText('Button')
@@ -41,7 +41,7 @@ describe('<CalendarHeaderBtn />', () => {
 
   it('should not call select handler if one is not present on click', () => {
     const mockHandler = jest.fn()
-    const { getByText } = render(<CalendarHeaderBtn>Button</CalendarHeaderBtn>)
+    const { getByText } = render(<CalendarButton>Button</CalendarButton>)
 
     const element = getByText('Button')
     fireEvent.click(element)
@@ -50,7 +50,7 @@ describe('<CalendarHeaderBtn />', () => {
   })
 
   it('should render theme styles', () => {
-    const { container } = render(<CalendarHeaderBtn>Button</CalendarHeaderBtn>)
+    const { container } = render(<CalendarButton>Button</CalendarButton>)
 
     expect(container.firstChild).toHaveStyleRule('background-color', 'red')
     expect(container.firstChild).toHaveStyleRule('color', 'white')

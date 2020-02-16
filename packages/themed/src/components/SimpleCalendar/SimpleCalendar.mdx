@@ -2,10 +2,13 @@ import { Story, Preview, Props } from '@storybook/addon-docs/blocks'
 
 # Simple Calendar
 
-Imagine a combination of ActionScript and PHP. GROSS!
+Simple calendar is meant to primarily show events. DateCells and EventItems are not set up 
+to handle events. It by design is stateless so that you can hook the component 
+up to your favorite state management tool (i.e., Redux, Apollo, React Hooks, etc.) to change 
+the currently shown month. The example below uses react hooks. 
 
 <Preview>
-  <Story id="themed-components-simple-calendar--basic-usage"/>
+  <Story id="themed-ready-to-go-simple-calendar--basic-usage"/>
 </Preview>
 
 ## Props 

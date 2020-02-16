@@ -11,6 +11,7 @@ const dateCell = {
 }
 
 const dateHeader = {
+  m: 1,
   p: 1,
   borderRadius: 5,
 }
@@ -26,14 +27,14 @@ export const calendarTheme: CalendarVariants = {
     p: 2,
     textAlign: 'center',
   },
-  headerBtn: {
+  button: {
     border: '1px solid transparent',
-    backgroundColor: 'primary',
-    color: 'background',
+    backgroundColor: 'inherit',
+    color: 'inherit',
     fontSize: '5',
     outline: 'none',
     ':focus, :hover': {
-      borderColor: 'background',
+      borderColor: 'currentColor',
     },
   },
   dateCell: {
@@ -43,6 +44,7 @@ export const calendarTheme: CalendarVariants = {
     },
     selected: {
       ...dateCell,
+      color: 'background',
       backgroundColor: 'primary',
     },
     disabled: {
@@ -61,12 +63,10 @@ export const calendarTheme: CalendarVariants = {
       ...dateHeader,
       color: 'background',
       backgroundColor: 'primary',
-      boxShadow: '0 2px 3px rgba(0, 0, 0, 0.2)',
     },
   },
   eventItem: {
     backgroundColor: 'primary',
-    boxShadow: '0 1px 3px rgba(0, 0, 0, 0.2)',
     borderRadius: 3,
     color: 'background',
     m: 1,

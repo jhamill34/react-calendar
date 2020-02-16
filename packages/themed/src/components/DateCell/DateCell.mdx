@@ -1,13 +1,35 @@
 import { Story, Preview, Props } from '@storybook/addon-docs/blocks'
+import { DateHeader } from '../DateHeader'
 
 # Date Cell
 
-Imagine a combination of ActionScript and PHP. GROSS!
+This component is the main background of a calendar and visually represents 
+an actual date (e.g. February 15th 2020). 
+
+To style this component add a style object to your theme of the form
+
+```js dark
+{
+  calendar: {
+    dateCell: {
+      basic: { 
+        // Styles go here..
+      },
+      selected: { 
+        // Styles go here..
+      },
+      disabled: { 
+        // Styles go here..
+      },
+    }
+  }
+}
+```
 
 <Preview>
   <Story id="themed-components-date-cell--basic-usage"/>
 </Preview>
 
-## Props 
+## Date Cell Props 
 
 <Props />

@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core'
+import React from 'react'
 import { Chevron } from './Chevron'
 import mdx from './Chevron.mdx'
 
@@ -13,6 +12,10 @@ export default {
   },
 }
 
-export function basicUsage(): JSX.Element {
-  return <div></div>
+export function withDirectionLeft(): JSX.Element {
+  return <Chevron direction="left" />
+}
+
+export function withDirectionRight(): JSX.Element {
+  return <Chevron direction="right" />
 }

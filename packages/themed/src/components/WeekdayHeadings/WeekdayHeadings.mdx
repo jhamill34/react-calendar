@@ -2,12 +2,44 @@ import { Story, Preview, Props } from '@storybook/addon-docs/blocks'
 
 # Weekday Headings
 
-Imagine a combination of ActionScript and PHP. GROSS!
+Display the headings in a row. 
+
+```js dark
+{
+  calendar: {
+    weekDayHeading: {
+      // Styles go here..
+    }
+  }
+}
+```
+
+## Basic Usage
 
 <Preview>
   <Story id="themed-components-weekday-headings--basic-usage"/>
 </Preview>
 
+## With Short Headings
+
+<Preview>
+  <Story id="themed-components-weekday-headings--with-short-headings"/>
+</Preview>
+
+## With Non Default Start Date
+
+<Preview>
+  <Story id="themed-components-weekday-headings--with-start-date"/>
+</Preview>
+
 ## Props 
 
 <Props />
+
+## WeekDayValues 
+
+```tsx dark 
+enum WeekDayValues {
+  SUN, MON, TUE, WED, THU, FRI, SAT,
+}
+```

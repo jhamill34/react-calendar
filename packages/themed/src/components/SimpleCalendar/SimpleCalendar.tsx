@@ -21,7 +21,7 @@ import {
 import { CalendarEvent } from '@react-calendar/utils'
 
 import { CalendarHeader } from '../CalendarHeader'
-import { CalendarHeaderBtn } from '../CalendarHeaderBtn'
+import { CalendarButton } from '../CalendarButton'
 import { Chevron } from '../Chevron'
 import { DateCell } from '../DateCell'
 import { DateHeader } from '../DateHeader'
@@ -30,31 +30,47 @@ import { StickyBox } from '../StickyBox'
 import { WeekdayHeadings } from '../WeekdayHeadings'
 
 export interface SimpleEvent extends CalendarEvent {
-  /** */
   title: string
 }
 
 type SimpleCalendarProps = {
-  /** */
+  /**
+   * A date object that indicates which month to show currently.
+   */
   currentMonth: Date
 
-  /** */
+  /**
+   * An array of simple events to display.
+   *
+   * @default []
+   */
   events?: SimpleEvent[]
 
-  /** */
+  /**
+   * Function is triggered when the right button in the header
+   * is selected.
+   */
   nextMonth?: () => void
 
-  /** */
+  /**
+   * Function is triggered when the left button in the header
+   * is selected.
+   */
   prevMonth?: () => void
 
-  /** */
-  today?: Date
+  /**
+   * The date to indicate as today.
+   *
+   * @default Date.now()
+   */
+  today?: Date | number
 }
 
 /** */
 export function SimpleCalendar(props: SimpleCalendarProps): React.ReactElement {
-  const { currentMonth, today, events = [] } = props
+  const { currentMonth, today = Date.now(), events = [] } = props
 
+  const wrappedToday = new Date(today)
   const monthInterval: Interval = {
     start: startOfWeek(currentMonth),
     end: addWeeks(endOfMonth(currentMonth), 1),
@@ -69,24 +85,24 @@ export function SimpleCalendar(props: SimpleCalendarProps): React.ReactElement {
           <CalendarHeader
             left={
               props.prevMonth ? (
-                <CalendarHeaderBtn
+                <CalendarButton
                   label="Left Header Button"
                   onSelect={props.prevMonth}
                 >
                   <Chevron direction="left" />
-                </CalendarHeaderBtn>
+                </CalendarButton>
               ) : (
                 <div />
               )
             }
             right={
               props.nextMonth ? (
-                <CalendarHeaderBtn
+                <CalendarButton
                   label="Right Header Button"
                   onSelect={props.nextMonth}
                 >
                   <Chevron direction="right" />
-                </CalendarHeaderBtn>
+                </CalendarButton>
               ) : (
                 <div />
               )
@@ -102,11 +118,10 @@ export function SimpleCalendar(props: SimpleCalendarProps): React.ReactElement {
           bg={
             <DateRow
               interval={group.interval}
-              minHeight={250}
               renderDate={(date: Date): React.ReactElement => (
                 <DateCell disabled={!isSameMonth(currentMonth, date)}>
                   <DateHeader
-                    selected={today && isSameDay(today, date)}
+                    selected={isSameDay(wrappedToday, date)}
                     value={format(date, 'd')}
                   />
                 </DateCell>
@@ -116,6 +131,8 @@ export function SimpleCalendar(props: SimpleCalendarProps): React.ReactElement {
           fg={
             <ScheduleGroup
               events={group.events}
+              leadingSpace={3}
+              numEventRows={2}
               renderGroup={(events): React.ReactElement => (
                 <ScheduleRow
                   events={events}

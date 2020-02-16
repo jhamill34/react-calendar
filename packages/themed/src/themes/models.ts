@@ -3,7 +3,7 @@ import { SystemStyleObject } from '@styled-system/css'
 
 export type CalendarVariants = {
   header: SystemStyleObject
-  headerBtn: SystemStyleObject
+  button: SystemStyleObject
   dateCell: {
     base: SystemStyleObject
     selected: SystemStyleObject

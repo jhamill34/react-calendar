@@ -9,7 +9,7 @@ const mockTheme: CalendarTheme = {
       backgroundColor: 'red',
       color: 'white',
     },
-    headerBtn: {
+    button: {
       backgroundColor: 'red',
       color: 'white',
     },

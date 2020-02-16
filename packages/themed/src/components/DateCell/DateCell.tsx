@@ -1,24 +1,36 @@
-// eslint-disable-next-line tsdoc/syntax
 /** @jsx jsx */
-import React from 'react'
+import React, { ReactNode } from 'react'
 import PropTypes from 'prop-types'
 import { jsx } from 'theme-ui'
 
 type DateCellProps = {
-  /** */
-  children: React.ReactNode
+  /**  Any child components to render */
+  children: ReactNode
 
-  /** */
+  /**
+   * Indicates that the cell is inactive.
+   * When set to true it overrides the selected
+   * flag.
+   */
   disabled?: boolean
 
-  /** */
+  /**
+   * Indicates a cell has been selected. Useful for
+   * indicating to the user that they clicked a particular date.
+   */
+  selected?: boolean
+
+  /**
+   * This function is called when the user clicks on the date
+   * or has it focused and presses the ENTER key.
+   */
   onSelect?: () => void
 
-  /** */
+  /**
+   * This function is called when the user focuses on the
+   * date or has the mouse hover over it.
+   */
   onWillSelect?: () => void
-
-  /** */
-  selected?: boolean
 }
 
 const ENTER_KEY_CODE = 13

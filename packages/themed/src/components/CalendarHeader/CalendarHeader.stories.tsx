@@ -1,5 +1,7 @@
 import React from 'react'
-import { Styled } from 'theme-ui'
+import { withThemeProvider } from 'storybook-addon-theme-ui'
+import { Chevron } from '../Chevron'
+import { CalendarButton } from '../CalendarButton'
 import { CalendarHeader } from './CalendarHeader'
 import mdx from './CalendarHeader.mdx'
 
@@ -11,16 +13,23 @@ export default {
       page: mdx,
     },
   },
+  decorators: [withThemeProvider],
 }
 
 export function basicUsage(): JSX.Element {
   return (
-    <Styled.root>
-      <CalendarHeader
-        left={<div>LEFT!</div>}
-        right={<div>RIGHT!</div>}
-        title="Calendar Heading"
-      />
-    </Styled.root>
+    <CalendarHeader
+      left={
+        <CalendarButton onSelect={(): void => alert('Left Clicked!')}>
+          <Chevron direction="left" />
+        </CalendarButton>
+      }
+      right={
+        <CalendarButton onSelect={(): void => alert('Right Clicked!')}>
+          <Chevron direction="right" />
+        </CalendarButton>
+      }
+      title="Calendar Heading"
+    />
   )
 }

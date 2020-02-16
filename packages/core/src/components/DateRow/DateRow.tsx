@@ -51,7 +51,6 @@ export function DateRow(props: DateRowProps): React.ReactElement {
       css={{
         display: 'flex',
         flexDirection: vertical ? 'column' : 'row',
-        flexGrow: 1,
         pointerEvents: 'auto',
         minHeight,
         '& > *': {

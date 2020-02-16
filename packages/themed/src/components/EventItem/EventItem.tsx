@@ -4,13 +4,23 @@ import PropTypes from 'prop-types'
 import { jsx } from 'theme-ui'
 
 type EventItemProps = {
-  /** */
+  /**
+   * Hide the event component but still allow it to take up space.
+   * Events don't get passed to the component in this state.
+   *
+   * @default false
+   */
   hidden?: boolean
 
-  /** */
+  /**
+   * This function is called when the user clicks on the date
+   * or has it focused and presses the ENTER key.
+   */
   onSelect?: () => void
 
-  /** */
+  /**
+   * The string that should be displayed in the event.
+   */
   title: string
 }
 
@@ -40,7 +50,7 @@ export function EventItem(props: EventItemProps): React.ReactElement {
       onKeyDown={handleKeyDown}
       role="button"
       sx={{
-        opacity: hidden ? 0 : 1.0,
+        opacity: hidden ? 0 : 1,
         pointerEvents: hidden ? 'none' : 'auto',
         variant: 'calendar.eventItem',
       }}

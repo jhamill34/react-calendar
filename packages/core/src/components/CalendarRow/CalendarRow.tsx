@@ -26,6 +26,9 @@ export function CalendarRow(props: CalendarRowProps): React.ReactElement {
       css={{
         display: 'flex',
         position: 'relative',
+        '& > div:not(:first-of-type)': {
+          flexGrow: 1,
+        },
       }}
       role="rowgroup"
     >
@@ -33,10 +36,7 @@ export function CalendarRow(props: CalendarRowProps): React.ReactElement {
         css={{
           display: 'flex',
           position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
+          inset: 0,
           zIndex: 1,
           pointerEvents: 'none',
           '& > *': {
@@ -46,7 +46,6 @@ export function CalendarRow(props: CalendarRowProps): React.ReactElement {
       >
         {props.fg}
       </div>
-
       {props.bg}
     </div>
   )

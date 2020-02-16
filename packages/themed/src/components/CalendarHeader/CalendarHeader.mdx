@@ -1,13 +1,30 @@
 import { Story, Preview, Props } from '@storybook/addon-docs/blocks'
+import { Chevron } from '../Chevron'
 
 # Calendar Header 
 
-Imagine a combination of ActionScript and PHP. GROSS!
+This component is a basic heading generally used to display 
+the month the calendar is currently showing. It also comes with 
+two spots to put controls for the calendar itself (i.e., left and right). 
+In the example below the left and right containers are filled with the
+also provided `<Chevron />` component in this library.
+
+To style this component add a style object to your theme of the form
+
+```js dark
+{
+  calendar: {
+    header: {
+      // Styles go here..
+    }
+  }
+}
+```
 
 <Preview>
   <Story id="themed-components-calendar-header--basic-usage"/>
 </Preview>
 
-## Props 
+## Calendar Header Props 
 
 <Props />

@@ -2,7 +2,15 @@ import { Story, Preview, Props } from '@storybook/addon-docs/blocks'
 
 # Event Item
 
-Imagine a combination of ActionScript and PHP. GROSS!
+This component represents an event object. Generally it is overlayed on top of
+`<DateCell />` components by absolute positioning. Since both this component and 
+date cell handle events its useful to be able to hide all events so that the user can
+more easily select the date cells. When this components `hidden` prop is set to true
+events don't get triggered and instead get passed to the component underneath it. 
+
+Try it out in the example below. Curently the event item is on top of a `<div />` that registers 
+select events. When the event is not hidden then it won't call its handler function. But if you
+click the "Hide Top Event" button it will. 
 
 <Preview>
   <Story id="themed-components-event-item--basic-usage"/>

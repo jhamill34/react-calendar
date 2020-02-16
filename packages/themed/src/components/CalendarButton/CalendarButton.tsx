@@ -1,10 +1,9 @@
-// eslint-disable-next-line tsdoc/syntax
 /** @jsx jsx */
 import React, { ReactNode } from 'react'
 import PropTypes from 'prop-types'
 import { jsx } from 'theme-ui'
 
-type CalendarHeaderBtnProps = {
+type CalendarButtonProps = {
   /**
    * Any child components that need to be rendered.
    */
@@ -26,9 +25,7 @@ type CalendarHeaderBtnProps = {
 const ENTER_KEY_CODE = 13
 
 /** */
-export function CalendarHeaderBtn(
-  props: CalendarHeaderBtnProps
-): React.ReactElement {
+export function CalendarButton(props: CalendarButtonProps): React.ReactElement {
   /** */
   function handleClick(): void {
     if (props.onSelect) {
@@ -50,7 +47,7 @@ export function CalendarHeaderBtn(
       onKeyDown={handleKeyPress}
       sx={{
         display: 'inline-flex',
-        variant: 'calendar.headerBtn',
+        variant: 'calendar.button',
       }}
     >
       {props.children}
@@ -58,7 +55,7 @@ export function CalendarHeaderBtn(
   )
 }
 
-CalendarHeaderBtn.propTypes = {
+CalendarButton.propTypes = {
   children: PropTypes.node.isRequired,
   label: PropTypes.string,
   onSelect: PropTypes.func,
