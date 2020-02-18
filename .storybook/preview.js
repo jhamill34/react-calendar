@@ -20,7 +20,7 @@ const myTheme = create({
   barBg: '#b12121',
 
   brandTitle: 'React Calendar',
-  brandImage: 'https://placehold.it/350x150',
+  brandImage: '/header.png',
 })
 
 setupPreview(addParameters)
