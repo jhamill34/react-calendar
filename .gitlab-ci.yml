@@ -12,8 +12,9 @@ pages:
     - yarn install
     - yarn build
     - yarn docs
+    - mv docs public
   artifacts:
     paths:
-      - docs
+      - public 
   only:
     - master
