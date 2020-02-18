@@ -16,7 +16,8 @@
     "compile": "lerna run compile",
     "lint": "spedue lint",
     "test": "lerna run test",
-    "story": "spedue story"
+    "story": "spedue story",
+    "docs": "spedue story --mode static --docs"
   },
   "prettier": "@spedue/prettier-config",
   "eslintConfig": {

@@ -28,9 +28,9 @@ setupPreview(addParameters)
 addParameters({
   themeUi: {
     themes: [
-      { name: 'Neumorphism', theme: neumorphism},
       { name: 'Basic', theme: base },
       { name: 'Material', theme: material},
+      { name: 'Neumorphism', theme: neumorphism},
     ]
   },
   options: {
