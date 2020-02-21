@@ -12,6 +12,11 @@
   "bugs": {
     "url": "https://gitlab.com/joshrasmussen/react-calendar/issues"
   },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
   "private": false,
   "scripts": {
     "build": "spedue compile 'src/index.ts'",
