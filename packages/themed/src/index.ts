@@ -4,7 +4,7 @@ export { Chevron } from './components/Chevron'
 export { DateCell } from './components/DateCell'
 export { DateHeader } from './components/DateHeader'
 export { EventItem } from './components/EventItem'
-export { SimpleCalendar } from './components/SimpleCalendar'
+export { SimpleCalendar, SimpleEvent } from './components/SimpleCalendar'
 export { StickyBox } from './components/StickyBox'
 export { WeekdayHeadings } from './components/WeekdayHeadings'
 
