@@ -1,6 +1,6 @@
 # React Calendar Core
 
-Checkout the documentation for this library at [React Calendar](https://joshrasmussen.gitlab.io/react-calendar)
+Checkout the documentation for this library at [React Calendar](https://reactcalendar.netlify.com)
 
 # Getting Started 
 
