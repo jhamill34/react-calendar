@@ -17,7 +17,8 @@
     "lint": "spedue lint",
     "test": "lerna run test",
     "story": "spedue story",
-    "docs": "spedue story --mode static --docs"
+    "docs": "spedue story --mode static --docs",
+    "prepublish": "yarn run build && yarn run test"
   },
   "prettier": "@spedue/prettier-config",
   "eslintConfig": {
