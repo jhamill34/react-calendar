@@ -38,5 +38,24 @@ export function basicUsage(): JSX.Element {
 }
 
 export function withVerticalOrientation(): JSX.Element {
-  return <div></div>
+  return (
+    <DateRow
+      interval={{
+        start: new Date(2020, 1, 1),
+        end: new Date(2020, 1, 5),
+      }}
+      minHeight={100}
+      renderDate={(date: Date): React.ReactElement => (
+        <div
+          css={{
+            border: '1px solid black',
+            padding: '1em',
+          }}
+        >
+          {format(date, 'MMMM do, yyyy')}
+        </div>
+      )}
+      vertical
+    />
+  )
 }

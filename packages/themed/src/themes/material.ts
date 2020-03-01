@@ -3,7 +3,6 @@ import { CalendarTheme } from './models'
 const dateCell = {
   p: 2,
   display: 'flex',
-  justifyContent: 'center',
   alignItems: 'center',
   transition: 'background-color 0.3s ease-in-out',
   ':hover,:focus': {

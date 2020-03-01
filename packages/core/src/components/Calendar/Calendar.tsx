@@ -62,7 +62,6 @@ export function Calendar<T extends CalendarEvent>(
   return (
     <div
       css={{
-        height: '100%',
         display: 'flex',
         flexDirection: 'column',
         '& > *': {
