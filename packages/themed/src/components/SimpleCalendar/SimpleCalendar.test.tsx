@@ -135,7 +135,43 @@ describe('<SimpleCalendar />', () => {
     expect(queryAllByText('Fourth Event!')).toHaveLength(2)
   })
 
-  it.todo('click date')
-  it.todo('click event')
-  it.todo('selected dates')
+  it('click date', () => {
+    const mockCallback = jest.fn()
+    const { getByText } = render(
+      <SimpleCalendar currentMonth={mockMonth} selectDate={mockCallback} />
+    )
+
+    const date = getByText('16')
+    fireEvent.click(date)
+
+    expect(mockCallback).toHaveBeenCalledWith(new Date(2019, 10, 16))
+  })
+
+  it('click event', () => {
+    const mockCallback = jest.fn()
+    const { getByText } = render(
+      <SimpleCalendar
+        currentMonth={mockMonth}
+        events={mockEvents}
+        selectEvent={mockCallback}
+      />
+    )
+
+    const event = getByText('First Event!')
+    fireEvent.click(event)
+
+    expect(mockCallback).toHaveBeenCalledWith(mockEvents[0])
+  })
+
+  describe('vertical orientation', () => {
+    it('should only show this month', () => {
+      const { getAllByText } = render(
+        <SimpleCalendar currentMonth={mockMonth} vertical />
+      )
+
+      const elements = getAllByText(/^\d+$/)
+
+      expect(elements).toHaveLength(30)
+    })
+  })
 })

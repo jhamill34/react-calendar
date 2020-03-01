@@ -7,6 +7,8 @@ import {
   startOfWeek,
   addWeeks,
   endOfMonth,
+  addMonths,
+  getDaysInMonth,
 } from 'date-fns'
 
 import {
@@ -59,6 +61,21 @@ type SimpleCalendarProps = {
   prevMonth?: () => void
 
   /**
+   * Triggered when a date is selected
+   */
+  selectDate?: (date: Date) => void
+
+  /**
+   * Triggered with an event is selected
+   */
+  selectEvent?: (event: SimpleEvent) => void
+
+  /**
+   * @default false
+   */
+  vertical?: boolean
+
+  /**
    * The date to indicate as today.
    *
    * @default Date.now()
@@ -68,18 +85,34 @@ type SimpleCalendarProps = {
 
 /** */
 export function SimpleCalendar(props: SimpleCalendarProps): React.ReactElement {
-  const { currentMonth, today = Date.now(), events = [] } = props
+  const {
+    currentMonth,
+    today = Date.now(),
+    events = [],
+    vertical = false,
+    selectDate,
+    selectEvent,
+  } = props
 
   const wrappedToday = new Date(today)
-  const monthInterval: Interval = {
-    start: startOfWeek(currentMonth),
-    end: addWeeks(endOfMonth(currentMonth), 1),
+  let monthInterval: Interval
+
+  if (vertical) {
+    monthInterval = {
+      start: currentMonth,
+      end: addMonths(currentMonth, 1),
+    }
+  } else {
+    monthInterval = {
+      start: startOfWeek(currentMonth),
+      end: addWeeks(endOfMonth(currentMonth), 1),
+    }
   }
 
   return (
     <Calendar
       events={events}
-      groupSize={7}
+      groupSize={vertical ? getDaysInMonth(currentMonth) : 7}
       heading={
         <StickyBox>
           <CalendarHeader
@@ -109,7 +142,7 @@ export function SimpleCalendar(props: SimpleCalendarProps): React.ReactElement {
             }
             title={format(currentMonth, 'MMMM yyyy')}
           />
-          <WeekdayHeadings />
+          {!vertical ? <WeekdayHeadings /> : null}
         </StickyBox>
       }
       interval={monthInterval}
@@ -119,13 +152,17 @@ export function SimpleCalendar(props: SimpleCalendarProps): React.ReactElement {
             <DateRow
               interval={group.interval}
               renderDate={(date: Date): React.ReactElement => (
-                <DateCell disabled={!isSameMonth(currentMonth, date)}>
+                <DateCell
+                  disabled={!isSameMonth(currentMonth, date)}
+                  onSelect={(): void => selectDate && selectDate(date)}
+                >
                   <DateHeader
                     selected={isSameDay(wrappedToday, date)}
                     value={format(date, 'd')}
                   />
                 </DateCell>
               )}
+              vertical={vertical}
             />
           }
           fg={
@@ -138,10 +175,15 @@ export function SimpleCalendar(props: SimpleCalendarProps): React.ReactElement {
                   events={events}
                   interval={group.interval}
                   renderEvent={(event): React.ReactElement => (
-                    <EventItem title={event.title} />
+                    <EventItem
+                      onSelect={(): void => selectEvent && selectEvent(event)}
+                      title={event.title}
+                    />
                   )}
+                  vertical={vertical}
                 />
               )}
+              vertical={vertical}
             />
           }
         />
