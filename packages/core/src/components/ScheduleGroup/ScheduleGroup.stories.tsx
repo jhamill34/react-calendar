@@ -142,5 +142,42 @@ export function withExtraRows(): JSX.Element {
 }
 
 export function withVerticalOrientation(): JSX.Element {
-  return <div></div>
+  return (
+    <ScheduleGroup
+      events={[
+        {
+          id: 0,
+          interval: {
+            start: new Date(2019, 11, 2),
+            end: new Date(2019, 11, 4),
+          },
+        },
+        {
+          id: 1,
+          interval: {
+            start: new Date(2019, 11, 3),
+            end: new Date(2019, 11, 5),
+          },
+        },
+        {
+          id: 2,
+          interval: {
+            start: new Date(2019, 11, 4),
+            end: new Date(2019, 11, 6),
+          },
+        },
+      ]}
+      renderGroup={(events): React.ReactElement => (
+        <div
+          css={{
+            border: '1px solid black',
+            padding: '1em',
+          }}
+        >
+          Scheduled Events: [{events.map(e => `Event ID: ${e.id}`).join(', ')}]
+        </div>
+      )}
+      vertical
+    />
+  )
 }
