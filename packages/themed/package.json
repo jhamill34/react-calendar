@@ -1,6 +1,6 @@
 {
   "name": "@react-calendar/themed",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
@@ -31,7 +31,7 @@
     "theme-ui": "^0.3.1"
   },
   "dependencies": {
-    "@react-calendar/core": "^0.2.2"
+    "@react-calendar/core": "^0.3.0"
   },
   "devDependencies": {
     "@spedue/scripts": "*"
